@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/7b12bcc245.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <title>Wedding Invite</title>
 </head>
 <body>
@@ -16,25 +16,30 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">A&G</label>
+        <label class="logo">G&K</label>
         <ul class="text">
-            <li><a href="#story" onclick="myFunction()">OUR STORY</a></li>
-            <li><a href="#stay" onclick="myFunction()">TRAVEL & STAY</a></li>
-            <li><a href="#registry" onclick="myFunction()">PROMISES</a></li>
+            <li><a href="#itinerario" onclick="myFunction()">ITINERARIO</a></li>
+            <li><a href="#estancia" onclick="myFunction()">ESTANCIA</a></li>
+            <li><a href="#registro" onclick="myFunction()">AGRADECIMIENTOS</a></li>
         </ul>
     </nav>
 
 
     <div class="home hz-margin">
-        <h3>We'er getting married</h3>
-        <h1>Aman. & Gur.</h1>
+        <h3>¡Deseamos pasar el día más importante de nuestra vida contigo!</h3>
+        <h1>GABRIEL & KATERYNA</h1>
         <div class="container-out">
             
             <div class="container-in text">
-                Friday, Oct. 20, 2023 <br>
-                ITC Sonar Bangla, Kolkata
-
-                <button class="huge-btn">RSVP</button>
+                <p>
+                    Sábado, 14 de junio de 2025
+                </p>
+                <br>
+                <p>
+                    Logroño, La Rioja, España
+                </p>
+                <a class="huge-btn" href="https://forms.gle/wqzNy7gnWmJP1QFy8" target="_blank">Confirmar Asistencia</a>
+                <div class="atention text">Se ruega la confirmación antes del día 28 de febrero de 2025.</div>
             </div>
             <div class="home-img" id="home-img-lg"></div>
         </div>
@@ -42,19 +47,35 @@
 
 
     <div class="home-img home-img-sm"></div>
-    <div class="timeline hz-margin reveal">
-        <h2>Celebrating Our Love <br>
-            With Those We Love
-        </h2>
+    <div class="timeline hz-margin reveal" id="itinerario">
+        <h2>Si te animas a unirte, <br>
+            ¡aquí tienes más detalles!</h2>
         <div class="timeline-container">
-            <div class="timeline-img"></div>
+            <div class="timeline-img timeline-img-1" data-image="./photos/iglesia.jpg"></div>
+            <div class="timeline-img timeline-img-2" data-image="./photos/restaurante.jpeg"></div>
             <div class="timings">
-                <h3>01.&nbsp &nbsp Ceremony</h3>
-                <div class="text">Friday, Oct. 20, 2023 <br>
-                    ITC Sonar Bangla, Kolkata</div>
-                <h3>02.&nbsp &nbsp Reception</h3>
-                <div class="text">Sunday, Oct. 22, 2023 <br>
-                    Poddar Vihar, Kolkata</div>
+                <h3>&nbsp&nbsp&nbsp Ceremonia</h3>
+                <div class="text">
+                    Os esperamos el sábado, 14 de junio de 2025 a las 13:00 horas en la Iglesia de Santa María de la Asunción, Navarrete, donde tendrá lugar la ceremonia. 
+                    <br><br>
+                    <span>
+                        <a href="https://maps.app.goo.gl/iAVUBdikTXrSi34T7" target="_blank">Dirección: C. Mayor Baja, 1, 26370 Navarrete, La Rioja</a>
+                    </span>
+                </div>
+                
+                <h3>&nbsp;&nbsp;&nbsp;Celebración</h3>
+                
+                <div class="text">
+                    La posterior celebración tendrá lugar en el Restaurante “La Merced” a las 15:00 horas.
+                    <br><br>
+                    <a href="https://maps.app.goo.gl/S6u4GKcVBvoYZqJc7" target="_blank">Dirección: Ctra. de Burgos, 186 · Logroño</a>
+                </div>
+                
+                <h3>&nbsp;&nbsp;&nbsp;Servicio de bus</h3>
+                
+                <div class="text">
+                    Ofrecemos servicio de autobús desde el centro de Logroño hasta la Iglesia y posteriormente hasta el sitio de celebración. Igualmente, habrá servicio de autobús tras la celebración, que comenzará su salida a las 23:30 realizando varias paradas.
+                </div>
             </div>
         </div>
     </div>
@@ -64,15 +85,15 @@
         <div class="h-reposition-container">
 
 
-            <div id="story" class="hz-margin">
-                <h3 class="reveal">Not Just an <br>
+            <!-- <div id="story">
+                 <h3 class="reveal">Not Just an <br>
                     Ordinary Love Story
                 </h3>
                 <p class="text reveal">We met on ferry. Not sure if the kids remember that one. His female housemates encouraged him to get on it - he wasn't keen, but one night we ended up chatting and the next day we met up at the Tellypara Ghat. We spent nine hours together by the river, and I bought him a cotton candy and he says that's how he knew I was the one.</p>
-            </div>
+             </div> -->
 
 
-            <div class="gallery hz-margin reveal">
+            <div id="story" class="gallery hz-margin reveal">
                 <div class="gallery-img"></div>
                 <div class="gallery-img"></div>
                 <div class="gallery-img"></div>
@@ -80,49 +101,67 @@
 
 
             <div class="quote reveal">
-                <h1>“To the world you are one person, but to one person you are the world”.</h1>
+                <h1>“Purchik, purchik, purchik...”</h1>
                 <div class="author text">Anonymous</div>
             </div>
 
 
             <div class="hands" id="parallax1"></div>
 
-
+            <div id="estancia"></div>
             <div id="stay">
-                <h2 class="reveal">Travel and Stay</h2>
+                <h2 class="reveal">Tu estancia en La Rioja</h2>
                 <div class="stay-container reveal">
                     <div class="stay-item">
                         <h3>01. <br>
-                            Getting There
+                            Alojamientos
                         </h3>
-                        <div class="text">Easy-to-follow <br> directions to the venue</div>
-                        <div class="text links">MAP & DETAILS</div>
+                        <div class="text">Algunos alojamientos que <br> puedes mirar rápido</div>
+                        <a class="text links" href="https://www.google.com/search?q=mejores+hoteles+rioja+cerca+de+Ctra.+de+Burgos%2C+186&sca_esv=4b803b01132785fa&sca_upv=1&rlz=1C5GCCM_en&udm=5&biw=1976&bih=1294&sxsrf=ADLYWIKJozYkv7qgN0jYzVJEZPle7Ac_jw%3A1726939685354&ei=JQLvZpaaFeGoxc8P19WHwQg&ved=0ahUKEwjWwPnTx9SIAxVhVPEDHdfqIYgQ4dUDCA8&uact=5&oq=mejores+hoteles+rioja+cerca+de+Ctra.+de+Burgos%2C+186&gs_lp=Egxnd3Mtd2l6LXNlcnAiM21lam9yZXMgaG90ZWxlcyByaW9qYSBjZXJjYSBkZSBDdHJhLiBkZSBCdXJnb3MsIDE4Nki_L1CZBVjZLXABeACQAQCYAWugAZgEqgEDNS4xuAEDyAEA-AEBmAIAoAIAmAMAiAYBkgcAoAeaBQ&sclient=gws-wiz-serp" target="_blank">MAP & DETAILS</a>
                     </div>
                     <div class="stay-item">
                         <h3>02. <br>
-                            Once You're There
+                            Sitios dónde comer
                         </h3>
-                        <div class="text">Some fun things to do in <br> the area</div>
-                        <div class="text links">OUR RECOMMENDATIONS</div>
+                        <div class="text">Algunos alojamientos que <br> puedes mirar rápido</div>
+                        <a class="text links" href="https://viajes.nationalgeographic.com.es/gastronomia/donde-comer-logrono-bares-restaurantes-que-merecen-viaje_20155" target="_blank">NUESTRA GUÍA</a>
                     </div>
                     <div class="stay-item">
                         <h3>03. <br>
-                            Where to Stay
+                            Lugares de interés
                         </h3>
-                        <div class="text">Hotels and B&Bs <br> to check out</div>
-                        <div class="text links">LODGING OPTIONS</div>
+                        <div class="text">Cómo no aburrirte <br> en Rioja</div>
+                        <a class="text links" href="https://www.viajeroscallejeros.com/lugares-que-ver-en-la-rioja/" target="_blank">RECOMENDACIONES</a>
                     </div>
                 </div>
             </div>
 
-
+            <div id="registro"></div>
             <div id="registry">
                 <div class="registry-container reveal">
-                    <h3>Promises</h3>
+                    <h3>¡Muchas gracias!</h3>
                     <div class="text">
-                        I will provide welfare and happiness for you and the children that we bear and you shall offer me food and help whenever it is required. Together, we will protect our children and home and stand as each other's strength and courage. I will put every other person secodary to you. You make my like complete and promise to respect you. God bless you, my best friend. I pray thee, may my presence fill our life with joy and prospers.
+                        Vuestra presencia es el mejor regalo que nos podéis hacer pero si queréis ayudarnos a conseguir nuestra Luna de miel ideal, os dejamos nuestro número de cuenta:
                     </div>
-                    <button class="huge-btn text">BLESS US</button>
+                    <div class="huge-btn text" onclick="copyToClipboard()">
+                        <div class="mini-flex"><span id="iban">ES71 0182 5322 2202 0141 1023</span>
+                            <button class="copy-btn">
+                            <svg height="1.5vh" width="1.5vh" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                viewBox="0 0 488.3 488.3" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124
+                                        C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124
+                                        c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/>
+                                    <path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227
+                                        c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6
+                                        V38.6C439.65,17.3,422.35,0,401.05,0z"/>
+                                </g>
+                            </g>
+                            </svg>
+                          </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="registry-img registry-img-lg" id="parallax2"></div>
             </div>
@@ -130,16 +169,16 @@
 
 
             <div class="parting-message reveal">
-                <h1>Hope to See You!</h1>
-                <button class="huge-btn">RSVP</button>
+                <h1>¡Esperamos verte!</h1>
+                <a class="huge-btn" href="https://forms.gle/wqzNy7gnWmJP1QFy8" target="_blank">Confirmar Asistencia</a>
             </div>
 
 
             <footer>
-                <h2>Give us a Call</h2>
-                <h2>Amandeep: 123-456-7890</h2>
-                <h2>Gurpreet: 123-456-7890</h2>
-                <div class="text">© 2023 for Aman and Gur. Made by <a href="https://twitter.com/NathArchak" class="text">@NathArchak</a></div>
+                <h2>Teléfonos de contacto</h2>
+                <h2>Kateryna: <a href="tel:+34617631325">+34 617 631 325</a></h2>
+                <h2>Gabriel: <a href="tel:+34680411846">+34 680 411 846</a></h2>
+                <div class="text">© 2025 Nikuja Petruja.</div>
             </footer>
         </div>
     </div>

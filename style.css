@@ -62,16 +62,17 @@ h3{
     font-size: 1rem;
     background: transparent;
     border: 1px solid #212121;
-    padding: 25px 50px;
+    padding: 25px 30px;
     border-radius: 50px;
     width: fit-content;
-    margin: 30px 0;
+    margin: 30px 0px;
 }
 .huge-btn:hover{
     color: grey;
     border-color: grey;
 }
 .v-reposition-container{
+    z-index: -1;
     position: absolute;
     left: 0;
     width: 100vw;
@@ -79,14 +80,26 @@ h3{
 .h-reposition-container{
     width: 100vw;
     position: relative;
-    top: 100vh;
+    top: 80vh;
 }
+
+a:hover{
+    color: orange;
+    transition: .5s;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
 /* <===================NAVBAR===================> */
 
 nav{
     height: 3vh;
     width: 100%;
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
 }
 label.logo{
     font-size: 35px;
@@ -168,18 +181,39 @@ a:hover{
     #check:checked ~ ul{
         left: 0;
     }
+    nav{
+        margin-bottom: 10vh;
+    }
 }
 
 /* <===================HOME===================> */
 
+.home h3 {
+    margin: 7vh 0;
+}
+
+.home h1 {
+    margin: 5vh 0;
+}
+
+.home p {
+    margin: 1vh 0;
+}
+
+.huge-btn{
+    margin: 10vh 0px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .container-out{
-    margin-top: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .home-img{
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/chuck-842bb.appspot.com/o/GurAmanWed%2Fpic1.jpg?alt=media&token=5dbf5af2-354b-464c-9db2-7da57b484eda);
+    background-image: url('./photos/IMG_5147-3.JPeG');
     background-size: cover;
     background-position: center;
 }
@@ -201,9 +235,39 @@ a:hover{
     }
     .home-img-sm{
         display: block;
+        margin: 50px;
+        width: auto;
+        height: 60vh;
     }
     #home-img-lg{
+        height: 130vh;
         display: none;
+        margin: 30px;
+        width: auto;
+    }
+    .huge-btn{
+        margin: 80px 0px;
+    }
+}
+
+@media (max-width:570px){
+    .home h3 {
+        margin: 1vh 0;
+    }
+    .home h1 {
+        margin: 1vh 0;
+    }
+    .home p {
+        margin: 0vh 0;
+    }
+    .huge-btn{
+        margin: 30px auto;
+    }
+    .home-img-sm{
+        height: 70vh;
+        display: block;
+        margin: 30px;
+        width: auto;
     }
 }
 
@@ -217,25 +281,47 @@ a:hover{
     top: -30vh;
     width: 100%;
     backdrop-filter: blur(4px);
-    padding: 8vh var(--horizontal-margin-spacing);
+    padding: 6vh var(--horizontal-margin-spacing);
 }
 .timeline-container{
     display: flex;
     flex-direction: row;
-    margin: 8vh 0;
+    margin: 3vh 0;
+    justify-content: space-around;
+    align-items: center;
 }
-.timeline-img{
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/chuck-842bb.appspot.com/o/GurAmanWed%2Fpic2.jpg?alt=media&token=7a0e5f94-d68e-4d32-bd3b-2a82b7acd40c);
+.timeline-img {
     height: 70vh;
-    width: 30vw;
+    width: 20%;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    margin: 0 30px;
+    position: relative;
+    overflow: hidden;
 }
+
+.timeline-img-1 {
+    background-image: url('./photos/iglesia.jpeg');
+}
+.timeline-img-2 {
+    background-image: url('./photos/restaurante.jpeg');
+}
+@media (max-width: 1000px) {
+    .timeline-img {
+        height: 20vh;
+        width: 90%;
+        margin: 10px;
+    }
+}
+
 .timings{
     margin: 30px;
+    width: 60%;
 }
 .timeline-container .text{
     padding: 1rem 0 1rem 4rem;
+    margin: 10px 0;
 }
 @media (max-width:1000px){
     .timeline{
@@ -250,19 +336,23 @@ a:hover{
     .timeline-container{
         flex-direction: column;
     }
-    .timeline-img{
-        height: 50vh;
-        width: 100%;
+    .timeline-img-1, .timeline-img-2 {
+        height: 10vh; /* Ajusta el alto para pantallas más pequeñas */
+        width: 90%;
+        margin: 10px;
+        background-attachment: scroll; /* Deshabilita el efecto en pantallas pequeñas */
+    }
+    .timings{
+        margin: 30px;
+        width: 90%;
     }
 }
 
 /* <===================STORY===================> */
 
 #story{
-    padding-top: 10vh;
     display: flex;
     flex-direction: row;
-    margin: 10vh 0;
 }
 #story h3{
     width: 40vw;
@@ -298,27 +388,26 @@ a:hover{
 
 .gallery{
     display: flex;
-    padding: 20vh 0;
+    padding: 5vh 0;
     justify-content: center;
     align-items: center;
 }
 .gallery-img{
     width: 30vw;
     height: 30vw;
-    margin: 10px;
+    margin: 3vh 3vh;
     background-size: cover;
     background-position: center;
 }
 .gallery-img:nth-child(1){
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/chuck-842bb.appspot.com/o/GurAmanWed%2Fpic3.jpg?alt=media&token=32a76585-cbeb-41f5-8921-6ad1ff60aa79);
-    background-position-x: right;
+    background-image: url('./photos/IMG_0350.JPEG');
 }
 .gallery-img:nth-child(3){
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/chuck-842bb.appspot.com/o/GurAmanWed%2Fpic4.jpg?alt=media&token=3bde5693-e5c8-412d-bd47-1ef972258406);
+    background-image: url('./photos/IMG_0363.jpeg');
 }
 .gallery-img:nth-child(2){
     background-position-y: top;
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/chuck-842bb.appspot.com/o/GurAmanWed%2Fpic5.jpg?alt=media&token=d9ef9475-ec6d-41ca-8cfd-3e45b70139d3);
+    background-image: url('./photos/IMG_0377.jpeg');
 }
 @media (max-width:1000px){
     .gallery{
@@ -326,9 +415,8 @@ a:hover{
         padding: 0;
     }
     .gallery-img{
-        width: 100vw;
+        width: 80%;
         height: 90vw;
-        margin: 2px 0;
     }
     .gallery-img:nth-child(2){
         position: relative;
@@ -338,7 +426,7 @@ a:hover{
 
 /* <===================QUOTE===================> */
 .quote{
-    margin: 10vh 0;
+    margin: 7vh 0;
 }
 .quote h1{
     width: 55vw;
@@ -360,9 +448,9 @@ a:hover{
 /* <===================HANDS===================> */
 
 .hands{
-    height: 120vh;
+    height: 80vh;
     width: 100%;
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/chuck-842bb.appspot.com/o/GurAmanWed%2Fpic6.jpg?alt=media&token=febecde7-9479-4a1e-8402-28f021228422);
+    background-image: url("./photos/rioja.jpeg");
     background-size: cover;
     background-position-y: center;
     background-attachment: fixed;
@@ -372,7 +460,7 @@ a:hover{
     /* <===================STAY===================> */
     #stay{
         background-color: var(--grey-color);
-        padding: 10vh var(--horizontal-margin-spacing);
+        padding: 5vh var(--horizontal-margin-spacing);
         width: 100%;
 }
 .stay-container{
@@ -401,7 +489,7 @@ a:hover{
 /* <===================REGISTRY===================> */
 
 #registry{
-    padding: 20vh var(--horizontal-margin-spacing) 0 var(--horizontal-margin-spacing); 
+    padding: 10vh var(--horizontal-margin-spacing) 0 var(--horizontal-margin-spacing); 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -412,18 +500,52 @@ a:hover{
 }
 .registry-container .text{
     text-align: justify;
-    margin: 20px 0;
+    margin: 50px 0;
 }
-.registry-img{
+.copy-btn {
+    position: relative;
+    transform: translateY(10%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Adjust icon size */
+    color: #202020;
+}
+
+.copy-btn:hover img {
+    fill: #717171;
+}
+
+.copy-btn:hover .svg-copy {
+    fill: #717171;
+}
+
+.svg-copy {
+    color: white;
+}
+
+.huge-btn:hover {
+    background-color: #212121;
+    color: white;
+    span {
+        color: white;
+    }
+    svg {
+        fill: white;
+    }
+}
+
+.registry-img {
     display: block;
     height: 100vh;
     width: 40vw;
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/chuck-842bb.appspot.com/o/GurAmanWed%2Fpic7.jpg?alt=media&token=79b8d974-04ff-4b2d-bed5-82638399b34e);
-    background-size: cover;
+    background-image: url('./photos/IMG_4101.jpeg');
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center;
     background-position-y: top;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
 }
+
 .registry-img-sm{
     display: none;
 }
@@ -448,7 +570,7 @@ a:hover{
     .registry-container{
         width: 100%;
     }
-    #registry button{
+    #registry .huge-btn{
         margin-inline: auto;
     }
 }
@@ -459,7 +581,7 @@ a:hover{
     margin-top: 10vh;
     text-align: center;
 }
-.parting-message button{
+.parting-message .huge-btn{
     margin:  10vh auto;
 }
 
@@ -475,4 +597,16 @@ footer{
 footer h2{
     font-size: 2Srem;
     font-weight: normal;
+}
+
+
+
+/* <===================PERSONAL===================> */
+
+.atention{
+    text-align: left;
+    margin: 10px 10px 5vh 0px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.3rem;
 }
