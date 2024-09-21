@@ -214,7 +214,7 @@ function runConfetti() {
 }
 
 // Run confetti on page load
-//window.addEventListener('load', runConfetti);
+window.addEventListener('load', runConfetti);
 
 // Function to trigger confetti on demand
 function triggerConfetti() {
@@ -270,3 +270,50 @@ window.addEventListener('resize', updateBackgroundPosition);
 updateBackgroundPosition(); // Initial call
   
 window.addEventListener("scroll", reveal);
+
+
+// ... (previous JavaScript remains the same) ...
+
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function updateParallax() {
+    if (window.innerWidth <= 1000 || isIOS()) {
+        parallax.style.backgroundAttachment = 'scroll';
+        parallax1.style.backgroundAttachment = 'scroll';
+        parallax2.style.backgroundAttachment = 'scroll';
+    } else {
+        parallax.style.backgroundAttachment = 'fixed';
+        parallax1.style.backgroundAttachment = 'fixed';
+        parallax2.style.backgroundAttachment = 'fixed';
+    }
+}
+
+window.addEventListener("scroll", function() {
+    if (window.innerWidth > 1000 && !isIOS()) {
+        let offset = window.pageYOffset;
+        parallax.style.backgroundPositionX = offset*(-0.07)-100 + "px";
+    }
+});
+
+window.addEventListener("scroll", function() {
+    if (window.innerWidth > 1000 && !isIOS()) {
+        let offset = window.pageYOffset;
+        offset -= 3100;
+        parallax1.style.backgroundPositionY = offset*(0.1) + "px";
+    }
+});
+
+window.addEventListener("scroll", function() {
+    if (window.innerWidth > 1000 && !isIOS()) {
+        let offset = window.pageYOffset;
+        offset -= 5800;
+        parallax2.style.backgroundPositionY = offset*(-0.1) + "px";
+    }
+});
+
+window.addEventListener('resize', updateParallax);
+window.addEventListener('load', updateParallax);
+
+// ... (rest of the JavaScript remains the same) ...

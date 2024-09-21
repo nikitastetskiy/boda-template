@@ -610,3 +610,64 @@ footer h2{
     font-size: 1rem;
     line-height: 1.3rem;
 }
+
+
+
+
+/* ... (previous CSS remains the same) ... */
+
+@media (max-width: 570px) {
+    :root {
+        --h1-size: 3rem;
+        --h2-size: 1.8rem;
+        --h3-size: 1.5rem;
+        --text-size: 1.1rem;
+        --horizontal-margin-spacing: 2rem;
+    }
+
+    .home h1 {
+        line-height: 1.2;
+        margin: 2vh 0;
+    }
+
+    .home h3 {
+        margin: 2vh 0;
+    }
+
+    .home p {
+        margin: 1vh 0;
+    }
+
+    .huge-btn {
+        margin: 3vh auto;
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    .timeline-container .text {
+        padding: 1rem 0 1rem 2rem;
+    }
+
+    #story p {
+        font-size: var(--text-size);
+        line-height: 1.5;
+    }
+
+    .quote h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        width: 80vw;
+    }
+}
+
+/* ... (rest of the CSS remains the same) ... */
+
+.hands {
+    background-attachment: scroll;
+}
+
+@media (min-width: 1001px) {
+    .hands {
+        background-attachment: fixed;
+    }
+}
