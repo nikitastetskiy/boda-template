@@ -14,6 +14,10 @@
     --grey-color: rgba(232,230,230,1);
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* <===================UNIVERSAL CSS===================> */
 
 *{
@@ -447,21 +451,22 @@ a:hover{
 
 /* <===================HANDS===================> */
 
-.hands{
+.hands {
     height: 80vh;
     width: 100%;
     background-image: url("./photos/rioja.jpeg");
     background-size: cover;
-    background-position-y: center;
-    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
-}
+    background-attachment: scroll; /* This ensures background-attachment doesn't interfere */
+    will-change: background-position;
+    overflow: hidden; /* Prevents any shifting or padding effects */
+  }
 
-    /* <===================STAY===================> */
-    #stay{
-        background-color: var(--grey-color);
-        padding: 5vh var(--horizontal-margin-spacing);
-        width: 100%;
+/* <===================STAY===================> */
+#stay{
+    background-color: var(--grey-color);
+    padding: 16vh 5vh 5vh 4vh;
 }
 .stay-container{
     display: flex;
@@ -481,8 +486,14 @@ a:hover{
         flex-direction: column;
         margin: 10px 0;
     }
-    .stay-item{
-        margin: 2vh 0;
+    .stay-item .text{
+        margin: 2vh 0 3vh 5vh;
+    }
+    .stay-item * {
+        margin: 2px 0;
+    }
+    .stay-item {
+        margin: 3vh 0;
     }
 }
 
@@ -510,6 +521,7 @@ a:hover{
     cursor: pointer;
     font-size: 18px; /* Adjust icon size */
     color: #202020;
+    padding: 0;
 }
 
 .copy-btn:hover img {
@@ -522,6 +534,9 @@ a:hover{
 
 .svg-copy {
     color: white;
+    fill: #3e3e3e;
+    width: 20px; /* Adjust icon size */
+    height: 20px; /* Adjust icon size */
 }
 
 .huge-btn:hover {
@@ -537,7 +552,7 @@ a:hover{
 
 .registry-img {
     display: block;
-    height: 100vh;
+    height: 90vh;
     width: 40vw;
     background-image: url('./photos/IMG_4101.jpeg');
     background-size: cover; /* Ensures the image covers the container */
@@ -578,11 +593,13 @@ a:hover{
 
 /* <===================PARTING MESSAGE===================> */
 .parting-message h1{
-    margin-top: 10vh;
+    margin: 0 30vh 20vh 30vh;
     text-align: center;
 }
 .parting-message .huge-btn{
-    margin:  10vh auto;
+    margin:  2vh auto;
+    padding: 2.5vh 5vh;
+    font-size: 1.5rem;
 }
 
 /* <===================FOOTER===================> */
@@ -618,10 +635,10 @@ footer h2{
 
 @media (max-width: 570px) {
     :root {
-        --h1-size: 3rem;
-        --h2-size: 1.8rem;
-        --h3-size: 1.5rem;
-        --text-size: 1.1rem;
+        --h1-size: 8rem;
+        --h2-size: 2.4rem;
+        --h3-size: 2rem;
+        --text-size: 1.7rem;
         --horizontal-margin-spacing: 2rem;
     }
 
@@ -639,13 +656,9 @@ footer h2{
     }
 
     .huge-btn {
-        margin: 3vh auto;
+        margin: 8vh auto;
         padding: 15px 20px;
-        font-size: 0.9rem;
-    }
-
-    .timeline-container .text {
-        padding: 1rem 0 1rem 2rem;
+        font-size: 1.9rem;
     }
 
     #story p {
@@ -658,16 +671,34 @@ footer h2{
         line-height: 1.3;
         width: 80vw;
     }
-}
 
-/* ... (rest of the CSS remains the same) ... */
+    .text{
+        line-height: 2rem;
+    }
 
-.hands {
-    background-attachment: scroll;
-}
+    .timeline-img {
+        display: none;
+    }
 
-@media (min-width: 1001px) {
-    .hands {
-        background-attachment: fixed;
+    .parting-message h1{
+        margin: 10vh 10vh 5vh 10vh;
+        text-align: center;
+    }
+    .parting-message .huge-btn{
+        margin:  2vh auto;
+        padding: 2.5vh 5vh;
+        font-size: 1.5rem;
+    }
+
+    .registry-img {
+        width: 90%;
+        margin: 0 auto;
     }
 }
+
+/* ... (previous CSS remains the same) ... */
+
+/* <===================HANDS===================> */
+
+
+/* ... (rest of the CSS remains the same) ... */
