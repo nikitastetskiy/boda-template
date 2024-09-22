@@ -321,7 +321,7 @@ a:hover{
 
 .timings{
     margin: 30px;
-    width: 60%;
+    width: 40%;
 }
 .timeline-container .text{
     padding: 1rem 0 1rem 4rem;
@@ -348,7 +348,7 @@ a:hover{
     }
     .timings{
         margin: 30px;
-        width: 90%;
+        width: 85%;
     }
 }
 
@@ -467,6 +467,7 @@ a:hover{
 #stay{
     background-color: var(--grey-color);
     padding: 16vh 5vh 5vh 4vh;
+    margin: 0;
 }
 .stay-container{
     display: flex;
@@ -475,7 +476,7 @@ a:hover{
     margin: 20vh 0;
 }
 .stay-item .text{
-    margin: 20px 0;
+    margin: 20px 20px;
 }
 .links{
     cursor: pointer;
@@ -484,7 +485,7 @@ a:hover{
 @media (max-width:1000px){
     .stay-container{
         flex-direction: column;
-        margin: 10px 0;
+        margin: 10px;
     }
     .stay-item .text{
         margin: 2vh 0 3vh 5vh;
@@ -635,16 +636,28 @@ footer h2{
 
 @media (max-width: 570px) {
     :root {
-        --h1-size: 8rem;
         --h2-size: 2.4rem;
         --h3-size: 2rem;
-        --text-size: 1.7rem;
+        --text-size: 1.9rem;
         --horizontal-margin-spacing: 2rem;
+    }
+
+    .hands {
+        display: none;
+      }
+
+    .home * {
+        margin: 4vh 0;
+    }
+
+    .atention {
+        margin: 10px 0;
+        font-size: 1.4rem;
     }
 
     .home h1 {
         line-height: 1.2;
-        margin: 2vh 0;
+        font-size: 6rem;
     }
 
     .home h3 {
@@ -668,7 +681,7 @@ footer h2{
 
     .quote h1 {
         font-size: 1.8rem;
-        line-height: 1.3;
+        line-height: 1.9;
         width: 80vw;
     }
 
@@ -681,7 +694,7 @@ footer h2{
     }
 
     .parting-message h1{
-        margin: 10vh 10vh 5vh 10vh;
+        margin: 15vh 10vh 5vh 10vh;
         text-align: center;
     }
     .parting-message .huge-btn{
