@@ -105,7 +105,7 @@ a:hover{
 nav{
     height: 3vh;
     width: 100%;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
 }
 label.logo{
     font-size: 35px;
@@ -318,7 +318,7 @@ a:hover{
 .timeline-container{
     display: flex;
     flex-direction: row;
-    margin: 3vh 0;
+    margin-top: 3vh;
     justify-content: space-around;
     align-items: center;
 }
@@ -348,7 +348,7 @@ a:hover{
 }
 
 .timings{
-    margin: 30px;
+    margin: 30px 30px 0px 30px;
     width: 40%;
 }
 .timeline-container .text{
@@ -375,7 +375,7 @@ a:hover{
         background-attachment: scroll; /* Deshabilita el efecto en pantallas pequeñas */
     }
     .timings{
-        margin: 30px;
+        margin: 30px 30px 0px 30px;
         width: 85%;
     }
 }
@@ -385,6 +385,7 @@ a:hover{
 #story{
     display: flex;
     flex-direction: row;
+    height: 100vh;
 }
 #story h3{
     width: 40vw;
@@ -479,22 +480,20 @@ a:hover{
 
 /* <===================HANDS===================> */
 
-.hands {
-    height: 80vh;
+.hands{
+    height: 120vh;
     width: 100%;
-    background-image: url("./photos/rioja.jpeg");
+    background-image: url('./photos/rioja.jpg');
     background-size: cover;
-    background-position: center;
+    background-position-y: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-attachment: scroll; /* This ensures background-attachment doesn't interfere */
-    will-change: background-position;
-    overflow: hidden; /* Prevents any shifting or padding effects */
-  }
+}
 
 /* <===================STAY===================> */
 #stay{
     background-color: var(--grey-color);
-    padding: 16vh 5vh 5vh 4vh;
+    padding: 7vh 5vh;
     margin: 0;
 }
 .stay-container{
@@ -622,7 +621,7 @@ a:hover{
 
 /* <===================PARTING MESSAGE===================> */
 .parting-message h1{
-    margin: 0 30vh 20vh 30vh;
+    margin: 0vh 20vh 20vh 20vh;
     text-align: center;
 }
 .parting-message .huge-btn{
@@ -661,6 +660,13 @@ footer h2{
 
 
 /* ... (previous CSS remains the same) ... */
+
+@media (max-width: 1000px) {
+    .parting-message h1{
+        margin: 15vh 10vh 5vh 10vh;
+        text-align: center;
+    }
+}
 
 @media (max-width: 570px) {
     :root {
@@ -721,10 +727,6 @@ footer h2{
         display: none;
     }
 
-    .parting-message h1{
-        margin: 15vh 10vh 5vh 10vh;
-        text-align: center;
-    }
     .parting-message .huge-btn{
         margin:  2vh auto;
         padding: 2.5vh 5vh;
