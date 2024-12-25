@@ -245,7 +245,7 @@ a:hover{
     justify-content: space-between;
 }
 .home-img{
-    background-image: url('./photos/IMG_5147-3.jpeg');
+    background-image: url('./photos/IMG_5147.webp');
     background-size: cover;
     background-position: center;
 }
@@ -334,10 +334,10 @@ a:hover{
 }
 
 .timeline-img-1 {
-    background-image: url('./photos/iglesia.jpeg');
+    background-image: url('./photos/iglesia.webp');
 }
 .timeline-img-2 {
-    background-image: url('./photos/restaurante.jpeg');
+    background-image: url('./photos/restaurante.webp');
 }
 @media (max-width: 1000px) {
     .timeline-img {
@@ -433,14 +433,14 @@ a:hover{
     background-position: center;
 }
 .gallery-img:nth-child(1){
-    background-image: url('./photos/IMG_0350.jpeg');
+    background-image: url('./photos/IMG_0350.webp');
 }
 .gallery-img:nth-child(3){
-    background-image: url('./photos/IMG_0363.jpeg');
+    background-image: url('./photos/IMG_0363.webp');
 }
 .gallery-img:nth-child(2){
     background-position-y: top;
-    background-image: url('./photos/IMG_0377.jpeg');
+    background-image: url('./photos/IMG_0377.webp');
 }
 @media (max-width:1000px){
     .gallery{
@@ -582,7 +582,7 @@ a:hover{
     display: block;
     height: 90vh;
     width: 40vw;
-    background-image: url('./photos/IMG_4101.jpeg');
+    background-image: url('./photos/IMG_4101.webp');
     background-size: cover; /* Ensures the image covers the container */
     background-position: center;
     background-position-y: top;
