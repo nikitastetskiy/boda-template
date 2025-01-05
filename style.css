@@ -95,7 +95,7 @@ a:hover{
 
 @media (max-width: 500px) {
     h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 }
 
@@ -698,7 +698,7 @@ footer h2{
 
     .home h1 {
         line-height: 1.2;
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .home h3 {
