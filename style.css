@@ -344,7 +344,7 @@ a:hover{
 @media (max-width: 1000px) {
     .timeline-img {
         height: 20vh;
-        width: 90%;
+        width: 80%;
         margin: 10px;
     }
 }
@@ -370,11 +370,17 @@ a:hover{
     .timeline-container{
         flex-direction: column;
     }
-    .timeline-img-1, .timeline-img-2 {
-        height: 10vh; /* Ajusta el alto para pantallas más pequeñas */
-        width: 90%;
+    .timeline-img-1 {
+        height: 30vh;
+        width: 70%;
         margin: 10px;
-        background-attachment: scroll; /* Deshabilita el efecto en pantallas pequeñas */
+        background-attachment: scroll;
+    }
+
+    .timeline-img-2 {
+        width: 70%;
+        margin: 10px;
+        background-attachment: scroll;
     }
     .timings{
         margin: 30px 30px 0px 30px;
@@ -730,8 +736,17 @@ footer h2{
         line-height: 2rem;
     }
 
-    .timeline-img {
-        display: none;
+    .timeline-img-1 {
+        height: 30vh;
+        width: 70%;
+        margin: 10px;
+        background-attachment: scroll;
+    }
+
+    .timeline-img-2 {
+        width: 70%;
+        margin: 10px;
+        background-attachment: scroll;
     }
 
     .parting-message .huge-btn{
